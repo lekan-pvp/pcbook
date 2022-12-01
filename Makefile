@@ -1,5 +1,5 @@
 gen:
-	protoc --proto_path=proto proto/*.proto --go_out=pb --go_opt=paths=source_relative processor_message.proto
+	protoc -I ./ --go_out=pb --go_opt=paths=source_relative proto/*.proto
 
 clean:
 	rm pb/*.go
